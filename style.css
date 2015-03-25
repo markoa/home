@@ -10,3 +10,9 @@ h1, h2, h3 { font-weight: normal; }
 
 a { color: RoyalBlue; }
 a:hover { color: MidnightBlue; }
+
+blockquote {
+  color: gray;
+  border-left: 4px solid Gainsboro;
+  padding-left: 2em;
+}
