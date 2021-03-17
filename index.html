@@ -3,84 +3,159 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Marko Anastasov</title>
-    <meta name="description" content="The tiny personal homepage of Marko Anastasov, cofounder of Rendered Text and Semaphore. Use it to get in touch or read what I wrote about building software." />
-    <link rel="canonical" href="http://markoanastasov.com" />
+    <meta name="description" content="The personal homepage of Marko Anastasov, entrepreneur and software engineer. Learn about me and get in touch." />
+    <link rel="canonical" href="https://markoanastasov.com" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link href="/style.css" rel="stylesheet" type="text/css">
+
+    <script type="text/javascript">
+      document.addEventListener("DOMContentLoaded", function(event) {
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          document.documentElement.setAttribute("data-theme", "dark");
+        } else {
+          document.documentElement.setAttribute("data-theme", "light");
+        }
+
+        var themeToggle = document.getElementById("theme-toggle");
+        themeToggle.onclick = function() {
+          var currentTheme = document.documentElement.getAttribute("data-theme");
+          var switchToTheme = currentTheme === "dark" ? "light" : "dark"
+
+          document.documentElement.setAttribute("data-theme", switchToTheme);
+
+          return false;
+        }
+      });
+    </script>
   </head>
 
   <body>
-    <h1><small>Marko Anastasov</small></h1>
+    <header>
+      <h1><small>Marko Anastasov · @markoa</small></h1>
+    </header>
 
     <hr>
 
-    <section>
-      <p>
-        Hi! I'm a cofounder of <a href="http://renderedtext.com">Rendered Text</a>, a software company.
-        We’re making <a href="https://semaphoreci.com">Semaphore</a>, a cloud-based continuous integration and delivery service for developers.
-      </p>
-
-      <h3>Writing</h3>
-
-      <p>Here are some of my recent articles:</p>
-
-      <ul>
-        <li><a href="https://semaphoreci.com/blog/continuous-integration-fast-fundamental-tests-first">In Continuous Integration, Run Fast and Fundamental Tests First</a></li>
-        <li><a href="https://semaphoreci.com/cicd">CI/CD Explained</a></li>
-        <li><a href="https://semaphoreci.com/continuous-integration">Continuous Integration Explained</a></li>
-        <li><a href="https://semaphoreci.com/blog/google-cloud-run-cicd-first-look">A First Look At Google Cloud Run</a></li>
-        <li><a href="https://semaphoreci.com/blog/cicd-pipeline">CI/CD Pipeline: A Gentle Introduction</a></li>
-        <li><a href="https://semaphoreci.com/blog/cicd-microservices-digitalocean-kubernetes">CI/CD for Microservices on DigitalOcean Kubernetes</a></li>
-        <li><a href="https://thenewstack.io/why-cloud-native-success-depends-on-high-velocity-ci-cd/">Why Cloud Native Success Depends on High-Velocity CI/CD</a></li>
-        <li><a href="https://semaphoreci.com/blog/2018/08/22/continuous-delivery-patterns-with-serverless.html">Continuous Delivery Patterns with Serverless Applications</a></li>
-        <li><a href="https://semaphoreci.com/ebooks/rails-testing-handbook">Rails Testing Handbook (free ebook)</a></li>
-        <li><a href="https://semaphoreci.com/blog/2018/02/14/7-ways-continuous-delivery-helps-build-culture-of-learning.html">7 Ways Continuous Delivery Helps Build a Culture of Learning</a></li>
-        <li><a href="https://medium.com/@markoanastasov/learning-is-a-disruptive-change-25bb6d69bb3d">Learning is a disruptive change</a></li>
-        <li><a href="https://semaphoreci.com/blog/2017/07/27/what-is-the-difference-between-continuous-integration-continuous-deployment-and-continuous-delivery.html">What's the Difference Between Continuous Integration, Continuous Deployment and Continuous Delivery?</a></li>
-        <li><a href="https://semaphoreci.com/blog/2017/05/04/perfection-is-useless.html">Perfection is useless</a></li>
-        <li><a href="https://semaphoreci.com/blog/2017/03/21/cracking-monolith-forces-that-call-for-microservices.html">The Cracking Monolith: The Forces That Call for Microservices</a></li>
-        <li><a href="https://semaphoreci.com/blog/2017/03/02/what-is-proper-continuous-integration.html">What is Proper Continuous Integration?</a></li>
-        <li><a href="https://semaphoreci.com/blog/2016/11/03/how-bdd-and-continuous-delivery-help-developers-maintain-flow.html">How BDD and Continuous Delivery Help Developers Maintain Flow</a></li>
-        <li><a href="https://semaphoreci.com/community/tutorials/elements-of-a-continuous-deployment-workflow">Elements of a Continuous Deployment Workflow</a></li>
-        <li><a href="https://semaphoreci.com/community/tutorials/applying-bdd-to-ruby-on-rails-web-applications">Applying BDD to Ruby on Rails web applications</a></li>
-        <li><a href="https://semaphoreci.com/community/tutorials/behavior-driven-development">Behavior-Driven Development</a> (<a href="https://postd.cc/behavior-driven-development/">Japanese translation</a>)</li>
-        <li><a href="https://semaphoreci.com/community/tutorials/getting-started-with-rspec">Getting Started With RSpec</a></li>
-        <li><a href="https://semaphoreci.com/community/tutorials/rspec-subject-helpers-hooks-and-exception-handling">RSpec Subject, Helpers, Hooks and Exception Handling</a></li>
-        <li><a href="https://semaphoreci.com/community/tutorials/mocking-with-rspec-doubles-and-expectations">Mocking With RSpec: Doubles and Expectations</a></li>
-        <li><a href="https://semaphoreci.com/blog/2014/01/21/rails-testing-antipatterns-models.html">Rails Testing Antipatterns: Models</a></li>
-        <li><a href="https://semaphoreci.com/blog/2014/06/24/tdd-antipatterns-the-free-ride.html">TDD Antipatterns: The Free Ride</a></li>
-        <li><a href="http://renderedtext.com/blog/2014/01/30/become-an-exceptional-programmer-by-learning-to-ship/">Become an Exceptional Programmer By Learning To Ship</a></li>
-      </ul>
-
-      <h3>Talks</h3>
-
-      <ul>
-        <li>Scaling a Rails Monolith with Event-Driven Microservices, WindyCityRails 2016, Chicago</li>
-        <li>How to scale up, one microservice at a time, Abstractions 2016, Pittsburgh</li>
-        <li><a href="https://www.youtube.com/watch?v=dzArCly7wco">Improving your Rails application design with better TDD</a>, RubyConf Brasil 2014, São Paulo</li>
-        <li><a href="https://www.youtube.com/watch?v=8lUN3rKWlKc">Stack a platform with Linux containers</a>, RuPy 2013, Budapest</li>
-      </ul>
-
-      <h3>Active online profiles</h3>
-
-      <ul>
-        <li><a href="https://dev.to/markoa" rel="me">dev.to</a></li>
-        <li><a href="https://github.com/markoa" rel="me">GitHub</a></li>
-        <li><a href="https://medium.com/@markoanastasov" rel="me">Medium</a></li>
-        <li><a href="https://twitter.com/markoa" rel="me">Twitter</a></li>
-      </ul>
-
-      <hr>
-
-      <footer>
+    <main>
+      <section>
         <p>
-          What about you? Thanks for dropping by. You can reach me via email at marko @ renderedtext dot com.
+          Hi! I'm a cofounder of <a href="http://renderedtext.com">Rendered Text</a>, a software company.
+          We’re making <a href="https://semaphoreci.com">Semaphore</a>, a code delivery platform for developers.
         </p>
-        <em>This page was last updated on January 4, 2020.</em>
-      </footer>
-    </section>
+      </section>
+
+      <section>
+        <h2>🚥 Semaphore</h2>
+        <p>Ten years ago, the "state of the art" in automating software
+          testing and deployment meant you had to spend days setting up
+          Jenkins on a snowflake server and own it for life. That was
+          a big distraction from building products.</p>
+
+        <p>So we built <a href="https://semaphoreci.com">Semaphore</a> so that
+          every developer can set up a working continuous integration process
+          in a few minutes and not worry about how it works. (Originally, we
+          only planned to support Ruby on Rails, but things escalated.)</p>
+
+        <p>Today, Semaphore serves tens of thousands of developers in building
+          amazing apps for the web and mobile devices. We're proud to support
+          some of the world's best engineering teams as a 100% independent and
+          sustainable company.</p>
+
+        <p>If you'd like to work with us, visit the <a
+          href="https://semaphoreci.com/about/careers">Semaphore Careers
+          page</a> for details on our culture and openings. We're a remote and
+        international team of friendly people who love what they do.</p>
+      </section>
+
+      <section>
+        <h2>📚 Books</h2>
+        <ul>
+          <li><strong><em>CI/CD with Docker and Kubernetes</em></strong> (2020):
+            <a href="https://semaphoreci.com/resources/cicd-docker-kubernetes">Semaphore (PDF)</a>,
+            <a href="https://www.amazon.com/dp/B08L81GPM8">Amazon (Kindle)</a>
+          </li>
+          <li><strong><em>Rails Testing Handbook</em></strong> (2018):
+            <a href="https://semaphoreci.com/ebooks/rails-testing-handbook">Semaphore (PDF)</a>,
+            <a href="https://www.amazon.com/dp/B07DKFYS1Q">Amazon (Kindle)</a>
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>🎙 Interviews</h2>
+        <ul>
+          <li><a href="https://changelog.com/gotime/162">Changelog / Go Time podcast #162: We're talkin' CI/CD</a></li>
+          <li><a href="https://www.youtube.com/watch?v=1cL4c4edkFM">Container CI/CD: DevOps and Docker Live Show (Ep 97)</a></li>
+          <li><a href="https://devops.com/devops-chat-continuous-integration-with-semaphore/">DevOps Chat: CI/CD with the Semaphore Platform</a></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>🔖 Articles</h2>
+
+        <p>A selection of recently published articles:</p>
+
+        <ul>
+          <li><a href="https://semaphoreci.com/blog/continuous-integration-fast-fundamental-tests-first">In Continuous Integration, Run Fast and Fundamental Tests First</a></li>
+          <li><a href="https://semaphoreci.com/cicd">CI/CD Explained</a></li>
+          <li><a href="https://semaphoreci.com/continuous-integration">Continuous Integration Explained</a></li>
+          <li><a href="https://semaphoreci.com/blog/cicd-pipeline">CI/CD Pipeline: A Gentle Introduction</a></li>
+          <li><a href="https://semaphoreci.com/blog/cicd-microservices-digitalocean-kubernetes">CI/CD for Microservices on DigitalOcean Kubernetes</a></li>
+          <li><a href="https://thenewstack.io/why-cloud-native-success-depends-on-high-velocity-ci-cd/">Why Cloud Native Success Depends on High-Velocity CI/CD</a></li>
+          <li><a href="https://semaphoreci.com/blog/2018/08/22/continuous-delivery-patterns-with-serverless.html">Continuous Delivery Patterns with Serverless Applications</a></li>
+          <li><a href="https://semaphoreci.com/blog/2018/02/14/7-ways-continuous-delivery-helps-build-culture-of-learning.html">7 Ways Continuous Delivery Helps Build a Culture of Learning</a></li>
+          <li><a href="https://medium.com/@markoanastasov/learning-is-a-disruptive-change-25bb6d69bb3d">Learning is a disruptive change</a></li>
+          <li><a href="https://semaphoreci.com/blog/2017/07/27/what-is-the-difference-between-continuous-integration-continuous-deployment-and-continuous-delivery.html">What's the Difference Between Continuous Integration, Continuous Deployment and Continuous Delivery?</a></li>
+          <li><a href="https://semaphoreci.com/blog/2017/05/04/perfection-is-useless.html">Perfection is useless</a></li>
+          <li><a href="https://semaphoreci.com/blog/2017/03/21/cracking-monolith-forces-that-call-for-microservices.html">The Cracking Monolith: The Forces That Call for Microservices</a></li>
+          <li><a href="https://semaphoreci.com/blog/2017/03/02/what-is-proper-continuous-integration.html">What is Proper Continuous Integration?</a></li>
+          <li><a href="https://semaphoreci.com/blog/2016/11/03/how-bdd-and-continuous-delivery-help-developers-maintain-flow.html">How BDD and Continuous Delivery Help Developers Maintain Flow</a></li>
+          <li><a href="https://semaphoreci.com/community/tutorials/elements-of-a-continuous-deployment-workflow">Elements of a Continuous Deployment Workflow</a></li>
+          <li><a href="https://semaphoreci.com/community/tutorials/applying-bdd-to-ruby-on-rails-web-applications">Applying BDD to Ruby on Rails web applications</a></li>
+          <li><a href="https://semaphoreci.com/community/tutorials/behavior-driven-development">Behavior-Driven Development</a> (<a href="https://postd.cc/behavior-driven-development/">Japanese translation</a>)</li>
+          <li><a href="http://renderedtext.com/blog/2014/01/30/become-an-exceptional-programmer-by-learning-to-ship/">Become an Exceptional Programmer By Learning To Ship</a></li>
+        </ul>
+        </section>
+
+        <section>
+          <h2>🕺 Talks</h2>
+
+          <ul>
+            <li><a href="https://www.youtube.com/watch?v=_Q4sdhlrtLc">Scaling a Rails Monolith with Event-Driven Microservices</a>, WindyCityRails 2016, Chicago</li>
+            <li>How to scale up, one microservice at a time, Abstractions 2016, Pittsburgh</li>
+            <li><a href="https://www.youtube.com/watch?v=dzArCly7wco">Improving your Rails application design with better TDD</a>, RubyConf Brasil 2014, São Paulo</li>
+            <li><a href="https://www.youtube.com/watch?v=8lUN3rKWlKc">Stack a platform with Linux containers</a>, RuPy 2013, Budapest</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>🤝 Connect with me on</h2>
+
+          <ul>
+            <li><a href="https://dev.to/markoa" rel="me">Dev.to</a></li>
+            <li><a href="https://github.com/markoa" rel="me">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/markoa/" rel="me">LinkedIn</a></li>
+            <li><a href="https://medium.com/@markoanastasov" rel="me">Medium</a></li>
+            <li><a href="https://twitter.com/markoa" rel="me">Twitter</a></li>
+          </ul>
+        </section>
+
+        <hr>
+
+        <footer>
+          <p>
+            What about you? Thanks for dropping by. You can reach me via email at marko @ renderedtext dot com.
+          </p>
+          <em>This page was last updated in March 2021.</em>
+        </footer>
+      </section>
+    </main>
+
+    <aside>
+      <small><a href="" id="theme-toggle">😎 Toggle dark mode</a></small>
+    </aside>
 
   </body>
 </html>

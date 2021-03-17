@@ -1,18 +1,55 @@
+/* Dark mode inspired by https://github.com/dracula/dracula-theme */
+[data-theme="light"] {
+  --background-color: #f8f8f2;
+  --link-color: RoyalBlue;
+  --link-hover-color: white;
+  --link-hover-background-color: RoyalBlue;
+}
+
+[data-theme="dark"] {
+  --background-color: #282a36;
+  --text-color: #f8f8f2;
+  --link-color: #bd93f9;
+  --link-hover-color: #44475a;
+  --link-hover-background-color: #f8f8f2;
+}
+
 body {
-  font: 15px/24px Helvetica, sans-serif;
-  background: SeaShell;
-  color: #333;
-  margin: 2em;
+  font-family: 'Helvetica', Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+
+  background-color: var(--background-color);
+  color: var(--text-color);
+
+  margin: 2em 4em 2em 4em;
   max-width: 40em;
 }
 
 h1, h2, h3 { font-weight: normal; }
 
-a { color: RoyalBlue; }
-a:hover { color: MidnightBlue; }
+section { margin-bottom: 2em; }
+
+a { color: var(--link-color); }
+
+a:hover {
+  color: var(--link-hover-color);
+  background-color: var(--link-hover-background-color);
+  text-decoration: none;
+}
+
+#theme-toggle {
+  height: 40px;
+  position: fixed;
+  bottom: 0;
+  right: 2em;
+}
+
+a#theme-toggle { text-decoration: none; }
 
 blockquote {
   color: gray;
   border-left: 4px solid Gainsboro;
   padding-left: 2em;
 }
+
