@@ -1,69 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marko Anastasov</title>
-    <meta name="description" content="The personal homepage of Marko Anastasov, entrepreneur and software engineer. Learn about me and get in touch." />
-    <link rel="canonical" href="https://markoanastasov.com" />
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link href="/style.css" rel="stylesheet" type="text/css">
-
-    <script type="text/javascript">
-      document.addEventListener("DOMContentLoaded", function(event) {
-        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-          document.documentElement.setAttribute("data-theme", "dark");
-        } else {
-          document.documentElement.setAttribute("data-theme", "light");
-        }
-
-        var themeToggle = document.getElementById("theme-toggle");
-        themeToggle.onclick = function() {
-          var currentTheme = document.documentElement.getAttribute("data-theme");
-          var switchToTheme = currentTheme === "dark" ? "light" : "dark"
-
-          document.documentElement.setAttribute("data-theme", switchToTheme);
-
-          return false;
-        }
-      });
-    </script>
-  </head>
-
-  <body>
-    <header>
-      <h1><small>Marko Anastasov · @markoa</small></h1>
-    </header>
-
-    <hr>
-
-    <main>
-      <section>
-        <p>
-          👋 Tech entrepreneur. Co-founder of <a href="https://operately.com">Operately</a>,
-          startup operating system, and <a href="https://semaphoreci.com">Semaphore</a>,
-          code delivery platform.
-        </p>
-        <p>🤝 I do business execution, product design, marketing, and engineering.</p>
-        <p>👨‍👩‍👧‍👦 Dad x2</p>
-      </section>
-
-      <section>
-        <h2>🤝 Connect with me on</h2>
-
-        <ul>
-          <li><a href="https://twitter.com/markoa" rel="me">Twitter</a></li>
-          <li><a href="https://github.com/markoa" rel="me">GitHub</a></li>
-          <li><a href="https://www.linkedin.com/in/markoa/" rel="me">LinkedIn</a></li>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="bg-gray-200 min-h-screen flex items-center justify-center">
+    <div class="bg-white shadow-md rounded p-6 w-full max-w-xs">
+        <img class="w-32 h-32 mx-auto rounded-full border-4 border-gray-200 mb-4" src="avatar.jpg" alt="Profile Picture">
+        <h1 class="text-center text-xl font-bold mb-4">Marko Anastasov</h1>
+        <p class="text-center text-gray-800 mb-4">👋 Tech entrepreneur. Cofounder of <a href="https://operately.com" class="underline">Operately</a> and <a href="https://semaphoreci.com" class="underline">Semaphore</a>.</p>
+        <p class="text-center text-gray-800 mb-4">🤝 I do business execution, product design, marketing, and engineering.</p>
+        <p class="text-center text-gray-800 mb-8">👨‍👩‍👧‍👦 Dad ×2</p>
+        <ul class="space-y-4">
+          <li>
+            <a href="https://twitter.com/markoa" class="block text-center bg-sky-100 text-sky-900 font-bold py-2 px-4 rounded w-full transition-all hover:bg-sky-600 hover:text-sky-50">
+              <i class="fab fa-twitter mr-2"></i>
+              Twitter
+            </a>
+          </li>
+          <li>
+            <a href="https://blog.operately.com" class="block text-center bg-sky-100 text-sky-900 font-bold py-2 px-4 rounded w-full transition-all hover:bg-sky-600 hover:text-sky-50">
+              <i class="fas fa-rss mr-2"></i>
+              Operately Blog
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/markoa" class="block text-center bg-sky-100 text-sky-900 font-bold py-2 px-4 rounded w-full transition-all hover:bg-sky-600 hover:text-sky-50">
+              <i class="fab fa-github mr-2"></i>
+              GitHub
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/markoa/" class="block text-center bg-sky-100 text-sky-900 font-bold py-2 px-4 rounded w-full transition-all hover:bg-sky-600 hover:text-sky-50">
+              <i class="fab fa-linkedin mr-2"></i>
+              LinkedIn 
+            </a>
+          </li>
         </ul>
-      </section>
-
-    </main>
-
-    <aside>
-      <small><a href="" id="theme-toggle">😎 Toggle dark mode</a></small>
-    </aside>
-
-  </body>
+    </div>
+</body>
 </html>
